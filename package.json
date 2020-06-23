@@ -1,0 +1,14 @@
+{
+  "name": "super-mario",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "serve ./public"
+  },
+  "dependencies": {
+    "serve": "11.3.2"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
