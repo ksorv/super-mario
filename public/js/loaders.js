@@ -42,7 +42,6 @@ export function loadLevel(name) {
             const spriteLayer = createSpriteLayer(level.entities);
             level.compositor.layers.push(spriteLayer);
 
-            console.table(level.tiles)
             return level
         })
 }

@@ -31,12 +31,18 @@ export function createCollisionLayer(level){
         return getByIndexO.call(tileResolver, x, y)
     }
 
-
     return function drawCollision(context){
         context.strokeStyle = 'blue'
         resolvedTiles.forEach(({x, y}) => {
             context.beginPath()
             context.rect(x * tileSize, y * tileSize, tileSize, tileSize)
+            context.stroke()
+        })
+
+        level.entities.forEach(entity => {
+            context.strokeStyle = 'red'
+            context.beginPath()
+            context.rect(entity.pos.x, entity.pos.y, entity.size.x, entity.size.y)
             context.stroke()
         })
 
